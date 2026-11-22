@@ -23,6 +23,7 @@ Alikrik Ltd develops emulation software for Android, bringing classic handheld s
 | Fast-forward | up to 2× | 3×, 4×, 8× and unlimited |
 | Physical controllers | — | yes, with remapping |
 | Touch controls, battery saves, settings | yes | yes |
+| Box art for recognised games | yes | yes |
 | Ads | none | none |
 
 Coming soon to Google Play. More at **[alikrik.com/fgba](https://alikrik.com/fgba/)**.
