@@ -1,9 +1,5 @@
-# Alikrik
+# alikrik/.github
 
-Alikrik is an emulation app company building mobile emulators for Android, with iOS support planned for the future.
+Alikrik's GitHub organisation profile. [`profile/README.md`](profile/README.md) is what [github.com/alikrik](https://github.com/alikrik) shows.
 
-## Projects
-
-### fGBA
-
-Our first project is **fGBA**, an emulator for Game Boy, Game Boy Color, and Game Boy Advance games.
+Its images are in [`profile/assets/`](profile/assets/). The banner is rendered from [`profile/assets/src/banner.html`](profile/assets/src/banner.html), light and dark (the command is in that file); `fgba.png` is fGBA's Play Store feature graphic.

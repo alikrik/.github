@@ -1,0 +1,73 @@
+<!doctype html>
+<!--
+  Source of profile/assets/banner-light.png and banner-dark.png, the organisation profile's
+  banner. Rendered at 2× with headless Chromium (it loads Outfit and JetBrains Mono from
+  Google Fonts, so it needs the network):
+
+    for t in light dark; do
+      "<chromium>" --headless=new --hide-scrollbars --force-device-scale-factor=2 \
+        --window-size=1280,400 --virtual-time-budget=5000 \
+        --screenshot=profile/assets/banner-$t.png "file://$PWD/profile/assets/src/banner.html?theme=$t"
+    done
+
+  The wordmark, words and colours are alikrik.com's (Logo.astro, Hero.astro, global.css).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Alikrik banner</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=JetBrains+Mono:wght@500&display=block">
+<style>
+  :root { --bg: #f5f7fa; --ink: #202a38; --soft: #4a5568; --muted: #5a6578; --line: #d9dfe8; --node: #c4ccd8; --blue: #0a6ef5; --cyan: #0aa8d6; --eyebrow: #0a5fd6; }
+  :root.dark { --bg: #08090d; --ink: #f4f6fa; --soft: #a3abbd; --muted: #8a93a6; --line: #1f2431; --node: #2a3140; --blue: #2f8bff; --cyan: #09cefa; --eyebrow: #09cefa; }
+  html, body { margin: 0; overflow: hidden; background: var(--bg); }
+  svg { display: block; }
+</style>
+<script>if (new URLSearchParams(location.search).get('theme') === 'dark') document.documentElement.classList.add('dark');</script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400">
+  <rect width="1280" height="400" fill="var(--bg)"/>
+  <!-- Traces ending in rings, like the K mark's terminals: one per handheld fGBA plays -->
+  <g fill="none" stroke-width="2.5" stroke-linejoin="round">
+    <g stroke="var(--line)">
+      <path d="M800 80H870L900 110H1120"/>
+      <path d="M760 170H900L930 200H1120"/>
+      <path d="M820 260H850L880 290H1120"/>
+      <path d="M900 110V50M930 200V250M850 260V210"/>
+    </g>
+    <g fill="var(--node)" stroke="none">
+      <circle cx="800" cy="80" r="5"/><circle cx="760" cy="170" r="5"/><circle cx="820" cy="260" r="5"/>
+      <circle cx="900" cy="50" r="4"/><circle cx="930" cy="250" r="4"/><circle cx="850" cy="210" r="4"/>
+    </g>
+    <circle cx="1134" cy="110" r="12" stroke="var(--blue)" stroke-width="6"/>
+    <circle cx="1134" cy="200" r="12" stroke="var(--cyan)" stroke-width="6"/>
+    <circle cx="1134" cy="290" r="12" stroke="var(--blue)" stroke-width="6"/>
+  </g>
+  <g font-family="JetBrains Mono" font-weight="500" font-size="13" fill="var(--muted)" text-anchor="end">
+    <text x="1112" y="100">Game Boy Advance</text><text x="1112" y="190">Game Boy Color</text><text x="1112" y="280">Game Boy</text>
+  </g>
+  <!-- the alikrik wordmark (alikrik.com Logo.astro), 72 px high -->
+  <svg x="72" y="56" width="305" height="72" viewBox="89 495 1079 255">
+    <g transform="translate(89.5 496)" fill="none" stroke-linejoin="round" stroke-width="16">
+      <g stroke="var(--ink)"><path d="M54 20V76L78 100"/><path d="M90 155L54 186V235"/><path d="M26 127H75L96 107"/><path d="M107 132L190 218H200"/></g>
+      <circle cx="26" cy="127" r="19" fill="var(--ink)"/>
+      <g stroke="var(--blue)"><path d="M95 108L174 30H214"/><circle cx="230" cy="31" r="15"/></g>
+      <g stroke="var(--cyan)"><path d="M197 218H214"/><circle cx="230" cy="218" r="15"/></g>
+    </g>
+    <g fill="var(--ink)">
+      <path fill-rule="evenodd" d="M541 647.5a65.5 65.5 0 1 0-131 0a65.5 65.5 0 1 0 131 0ZM526 647.5a46.5 46.5 0 1 0-93 0a46.5 46.5 0 1 0 93 0Z"/>
+      <path d="M524 585h22v125h-22Z"/><path d="M592 529h22v181h-22Z"/><path d="M661 585h22v125h-22Z"/><circle cx="672" cy="545" r="15"/>
+      <path d="M731 529h22v181h-22ZM809 585H838L782.5 640.5L842 710H813L753 647.4V641Z"/>
+      <path d="M866 710V638A54 54 0 0 1 920 584H941V606H920A32 32 0 0 0 888 638V710Z"/>
+      <path d="M975 585h22v125h-22Z"/><circle cx="986" cy="545" r="15"/>
+      <path d="M1043 529h22v181h-22ZM1104 647L1156.3 710H1128.3L1090 664Z"/>
+    </g>
+    <path fill="var(--blue)" d="M1123 585H1153L1084 654L1069 639Z"/>
+  </svg>
+  <text x="74" y="192" font-family="JetBrains Mono" font-weight="500" font-size="15" letter-spacing="2.2" fill="var(--eyebrow)">ALIKRIK LTD · EMULATION SOFTWARE</text>
+  <text x="72" y="256" font-family="Outfit" font-weight="700" font-size="52" letter-spacing="-1.6" fill="var(--ink)">Handheld emulation,</text>
+  <text x="72" y="314" font-family="Outfit" font-weight="700" font-size="52" letter-spacing="-1.6" fill="var(--blue)">engineered for mobile.</text>
+</svg>
+</body>
+</html>
