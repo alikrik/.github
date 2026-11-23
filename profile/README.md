@@ -25,7 +25,7 @@ Alikrik Ltd develops emulation software for Android, bringing classic handheld s
 | Touch controls, battery saves, settings | yes | yes |
 | Ads | none | none |
 
-Coming soon to Google Play. More at **[alikrik.com/fgba](https://alikrik.com/fgba/)**.
+Get it on **[Google Play](https://play.google.com/store/apps/details?id=com.alikrik.fgba)**. More at **[alikrik.com/fgba](https://alikrik.com/fgba/)**.
 
 ## How we work
 
